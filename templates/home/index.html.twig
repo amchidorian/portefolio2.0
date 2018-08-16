@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{{ asset('build/css/navBar.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    {% include 'navbar.html.twig' %}
+    <div class="ui grid content">
+        <div class="ten wide column home-resume" style="background-color: aliceblue; float:left">
+            <h1 class="resume">Bonjour.<br>Je suis Dorian AMCHI<br>jeune développeur full stack.<br>Bienvenue sur mon Portfolio.</h1>
+        </div>
+        <div class="six wide column" style="background-color: #718C00">
+            <img style="border-radius: 50%; width: 200px;" class="ui image" src="https://i.gyazo.com/21898fe6c5f7ff269448812e79548c94.png">
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+
+{% endblock %}
+
+
