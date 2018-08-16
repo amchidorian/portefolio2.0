@@ -3,17 +3,19 @@
 {% block title %}Home{% endblock %}
 {% block style %}
     <link rel="stylesheet" href="{{ asset('build/css/navBar.css') }}">
+    <link rel="stylesheet" href="{{ asset('build/css/home.css') }}">
 {% endblock %}
 
 {% block body %}
 
     {% include 'navbar.html.twig' %}
-    <div class="ui grid content">
-        <div class="ten wide column home-resume" style="background-color: aliceblue; float:left">
-            <h1 class="resume">Bonjour.<br>Je suis Dorian AMCHI<br>jeune développeur full stack.<br>Bienvenue sur mon Portfolio.</h1>
-        </div>
-        <div class="six wide column" style="background-color: #718C00">
-            <img style="border-radius: 50%; width: 200px;" class="ui image" src="https://i.gyazo.com/21898fe6c5f7ff269448812e79548c94.png">
+    <div class="ui grid content home_div">
+        <div class="sixteen wide column home-resume">
+            <h1 class="home_text">Bonjour.<br>Je suis Dorian AMCHI<br>jeune développeur full stack.<br>Bienvenue sur mon Portfolio.</h1>
+            <button class="ui right labeled icon button">
+                <i class="down arrow icon"></i>
+                Next
+            </button>
         </div>
     </div>
 {% endblock %}

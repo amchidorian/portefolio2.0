@@ -7,6 +7,13 @@ parameters:
     locale: 'en'
 
 services:
+
+    templating.engine.pug:
+        public: true
+        autowire: false
+        class: Pug\PugSymfonyEngine
+        arguments:
+            - '@kernel'
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
