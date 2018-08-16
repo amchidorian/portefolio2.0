@@ -19,8 +19,11 @@ Encore
      */
     .addEntry('/js/semantic', './node_modules/semantic-ui/dist/semantic.min.js')
     .addEntry('/js/navBar', './assets/js/navBar.js')
+    .addEntry('/js/background', './assets/js/background.js')
     .addStyleEntry('/css/semantic', './node_modules/semantic-ui/dist/semantic.css')
     .addStyleEntry('/css/navBar', './assets/css/navBar.css')
+    .addStyleEntry('/css/background', './assets/css/background.css')
+    .addStyleEntry('/css/home', './assets/css/home.css')
     // .addStyleEntry('/css/home', './assets/css/home.css')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
