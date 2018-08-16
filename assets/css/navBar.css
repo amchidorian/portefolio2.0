@@ -1,0 +1,29 @@
+.logo{
+    font-family: 'Fascinate Inline', cursive;
+    color: rgba(0, 255, 219, 0.97);
+    font-size: 30px;
+}
+
+.item{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 45px !important;
+    height:57px !important;
+}
+
+.menu_text{
+    position: relative;
+    bottom: 0;
+    color: rgba(0, 255, 219, 0.97);
+}
+
+.content{
+    position: relative;
+    margin:0 !important;
+    padding: 0 !important;
+}
+
+.resume{
+    position: relative;
+    padding-left: 10px;
+}

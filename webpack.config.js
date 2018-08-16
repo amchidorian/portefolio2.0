@@ -18,6 +18,9 @@ Encore
      * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
      */
     .addEntry('/js/semantic', './node_modules/semantic-ui/dist/semantic.min.js')
+    .addEntry('/js/home', './assets/js/home.js')
+    .addStyleEntry('/css/semantic', './node_modules/semantic-ui/dist/semantic.css')
+    .addStyleEntry('/css/home', './assets/css/home.css')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 
@@ -28,11 +31,11 @@ Encore
      * list of features, see:
      * https://symfony.com/doc/current/frontend.html#adding-more-features
      */
-    .cleanupOutputBeforeBuild()
-    .enableBuildNotifications()
-    .enableSourceMaps(!Encore.isProduction())
+    // .cleanupOutputBeforeBuild()
+    // .enableBuildNotifications()
+    // .enableSourceMaps(!Encore.isProduction())
     // enables hashed filenames (e.g. app.abc123.css)
-    .enableVersioning(Encore.isProduction())
+    // .enableVersioning(Encore.isProduction())
 
     // enables Sass/SCSS support
     //.enableSassLoader()
