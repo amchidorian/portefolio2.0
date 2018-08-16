@@ -1,9 +1,9 @@
-
 <html>
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('build/css/semantic.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('build/css/background.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script
             src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -12,22 +12,25 @@
     <script src="{{ asset('build/js/semantic.js') }}"></script>
     {% block style %}{% endblock %}
 </head>
-<body style="background-color: #0d0e0d">
+<body>
+
+<canvas id="scene"></canvas>
 {% block body %}{% endblock %}
 </body>
 {% block javascripts %}{% endblock %}
 <script src="{{ asset('build/js/navBar.js') }}"></script>
+<script src="{{ asset('build/js/background.js') }}"></script>
 <script>
-    function onHover(x){
-        $(x).children( "i" ).css( "display", "none" );
-        $(x).children( "p" ).css( "display", "inline-block" );
-        $(x).children( "p" ).css({bottom : - ($(x).height() - $(x).children( "p" ).height())/2})
+    function onHover(x) {
+        $(x).children("i").css("display", "none");
+        $(x).children("p").css("display", "inline-block");
+        $(x).children("p").css({bottom: -($(x).height() - $(x).children("p").height()) / 2})
     }
 </script>
 <script>
-    function offHover(x){
-        $(x).children( "i" ).css( "display", "inline-block" );
-        $(x).children( "p" ).css( "display", "none" );
+    function offHover(x) {
+        $(x).children("i").css("display", "inline-block");
+        $(x).children("p").css("display", "none");
 
     }
 </script>
