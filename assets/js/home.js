@@ -12,10 +12,8 @@ function ajustContent() {
     var winW = $(window).width();
     var homeH = $(".home_text").height();
     var homeW = $(".home_text").width();
-    var loadH = $(".loader").height();
-    var loadW = $(".loader").width();
     $(".home_resume").css({top: winH / 2 - homeH});
-    $(".home_resume").css({left: winW / 2 - homeW});
+    $(".home_resume").css({left: winW / 2 - homeW/2});
 }
 
 function resizeText() {
