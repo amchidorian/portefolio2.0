@@ -10,17 +10,16 @@
 
     {% include 'navbar.html.twig' %}
     <div class="ui grid content home_div">
-        <div class="sixteen wide column home-resume">
+        <div class="sixteen wide column home_resume">
             <h1 class="home_text">Bonjour.<br>Je suis Dorian AMCHI<br>jeune développeur full stack.<br>Bienvenue sur mon Portfolio.</h1>
-            <button class="ui right labeled icon button">
+            <button class="ui inverted secondary right labeled icon button">En Savoir Plus
                 <i class="down arrow icon"></i>
-                Next
             </button>
         </div>
     </div>
 {% endblock %}
 {% block javascripts %}
-
+    <script src="{{ asset('build/js/home.js') }}"></script>
 {% endblock %}
 
 
