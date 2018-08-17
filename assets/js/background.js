@@ -9,14 +9,17 @@ colors = ["#005572", "#006573", "#008B8D", "#81BEAA", "#F4D4AD", "#81BEAA", "#00
 ctx.canvas.width = ww;
 ctx.canvas.height = wh;
 
+$(window).resize(function () {
+    init();
+});
 function init() {
     for (var i = 0; i < amount; i++) {
         particles.push(new Particle(i));
     }
     // window.addEventListener("mousemove", onMouseMove);
-    window.onresize = onResize;
+    // window.onresize = onResize;
+        requestAnimationFrame(render);
 
-    requestAnimationFrame(render);
 }
 
 function Particle(i) {
@@ -47,13 +50,14 @@ Particle.prototype.render = function (a) {
 
 }
 
-function onResize() {
-    ww = window.innerWidth;
-    wh = window.innerHeight;
-    ctx.canvas.width = ww;
-    ctx.canvas.height = wh;
-    // cancelAnimationFrame(requestAnimationFrame(render));
-};
+// function onResize() {
+//     ww = window.innerWidth;
+//     wh = window.innerHeight;
+//     ctx.canvas.width = ww;
+//     ctx.canvas.height = wh;
+//     init();
+//     // cancelAnimationFrame(requestAnimationFrame(render));
+// };
 
 function render(a) {
     console.log(a)
