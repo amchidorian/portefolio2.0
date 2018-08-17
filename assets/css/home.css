@@ -1,0 +1,21 @@
+.home_text{
+    position: relative;
+    color: white;
+    width: 450px !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size : 30px;
+}
+
+.home_div{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.home_resume{
+    height: 200px !important;
+}
+
+h1{
+    font-family: 'Open Sans', sans-serif;
+}
