@@ -5,6 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('build/css/semantic.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('build/css/background.css') }}">
+    <link rel="stylesheet" href="{{ asset('build/css/navBar.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script
             src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -14,13 +15,18 @@
     {% block style %}{% endblock %}
 </head>
 <body>
-
+<div class="ui message stage_banner" style="display: none">
+    <p class="stage_banner_text">Saissisez votre chance, <a>contacter moi</a>. Je suis actuellement a la recherche d'un stage pour la période
+        d'Octobre a Décembre 2018</p>
+</div>
+{% include 'navbar.html.twig' %}
 <canvas id="scene"></canvas>
 {% block body %}{% endblock %}
 </body>
 {% block javascripts %}{% endblock %}
 <script src="{{ asset('build/js/navBar.js') }}"></script>
 <script src="{{ asset('build/js/background.js') }}"></script>
+<script src="{{ asset('build/js/global.js') }}"></script>
 <script>
     function onHover(x) {
         $(x).children("i").css("display", "none");

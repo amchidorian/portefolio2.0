@@ -1,17 +1,18 @@
-var ww = window.innerWidth,
+var ww = $(window).height(),
     wh = window.innerHeight,
     canvas = document.getElementById("scene"),
     ctx = canvas.getContext("2d"),
     amount = 250,
     particles = []
-colors = ["#005572", "#006573", "#008B8D", "#81BEAA", "#F4D4AD", "#81BEAA", "#008B8D", "#006573", "#005572"];
+colors = ["#005572", "#006573", "#008B8D", "#81BEAA", "#f4d28c", "#81BEAA", "#008B8D", "#006573", "#005572"];
 
-ctx.canvas.width = ww;
+ctx.canvas.width = ww - $(".stage_banner").height();
 ctx.canvas.height = wh;
 
 $(window).resize(function () {
     init();
 });
+
 function init() {
     for (var i = 0; i < amount; i++) {
         particles.push(new Particle(i));
@@ -60,7 +61,6 @@ Particle.prototype.render = function (a) {
 // };
 
 function render(a) {
-    console.log(a)
     if (a == null || 15000 > a) {
         requestAnimationFrame(render);
 

@@ -1,0 +1,34 @@
+.about_div {
+    position: relative;
+}
+
+.about_text {
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+
+.about_parcours {
+    position: relative;
+}
+
+.about_a_propos{
+    position: relative;
+}
+
+.parcours_titre{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+}
+
+.ma_photo{
+    position: relative;
+    left: 0;
+}
+
+.console-container{
+    position: relative;
+    padding: 0 !important;
+}
