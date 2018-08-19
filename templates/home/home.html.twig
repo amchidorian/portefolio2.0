@@ -2,19 +2,21 @@
 
 {% block title %}Home{% endblock %}
 {% block style %}
-    <link rel="stylesheet" href="{{ asset('build/css/navBar.css') }}">
     <link rel="stylesheet" href="{{ asset('build/css/home.css') }}">
 {% endblock %}
 
 {% block body %}
 
-    {% include 'navbar.html.twig' %}
     <div class="ui grid content home_div">
         <div class="sixteen wide column home_resume">
-            <h1 class="home_text">Bonjour.<br>Je suis Dorian AMCHI<br>jeune développeur full stack.<br>Bienvenue sur mon Portfolio.</h1>
-            <button class="ui inverted secondary right labeled icon button">En Savoir Plus
+            <div class='console-container'><h1 class="home_text" style="display:none;">Bonjour. <br>Je suis un jeune
+                    <br><span id='text'></span>
+                    <br>Bienvenue sur mon Portfolio.</h1>
+            </div>
+            <a href="/about" class="ui inverted secondary right labeled icon button home_button" style="display:none;">En
+                Savoir Plus
                 <i class="down arrow icon"></i>
-            </button>
+            </a>
         </div>
     </div>
 {% endblock %}

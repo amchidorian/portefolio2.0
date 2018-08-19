@@ -1,6 +1,6 @@
 .home_text{
     position: relative;
-    color: white;
+    color: black;
     width: 450px !important;
     font-family: 'Montserrat', sans-serif;
     font-size : 30px;
@@ -14,6 +14,7 @@
 
 .home_resume{
     height: 200px !important;
+    width: 450px !important;
 }
 
 h1{
