@@ -9,9 +9,19 @@ $(document).ready(function () {
 $(window).resize(function () {
     console.log($(window).width())
     if ($(window).width() > 1150) {
+        $(".column_general").show()
+        $(".column_infos").show()
+        $(".column_general_mobile").hide()
         ajustGeneralDesktop();
         ajustParcoursDesktop();
     } else {
+        $(".column_general").hide()
+        $(".column_infos").hide()
+        $(".column_general_mobile").show()
+        $(".ma_photo_mobile").show()
+        $(".column_a_propos_mobile").show()
+        $(".column_parcours_mobile").show()
+        $("#text_mobile").text("Dorian AMCHI")
         ajustGeneralMobile();
         ajustParcoursMobile();
     }
@@ -19,12 +29,12 @@ $(window).resize(function () {
 });
 
 function desktopInit() {
-    $(".column_general_desktop").height($(window).height() - $(".stage_banner").height())
+    $("#scene").height($(window).height() - $(".stage_banner").height())
     $(".column_general").show()
     $(".column_infos").show()
     var timeOut = setTimeout(function () {
         if (timeOut) {
-            animatedText();
+            animatedText('desktop');
             clearTimeout(timeOut);
         }
     }, 500);
@@ -61,12 +71,13 @@ function ajustGeneralDesktop() {
 }
 
 function ajustParcoursDesktop() {
+    var winW = $(window).height();
     var columnW = $(".column_infos").width();
     var columnH = $(".column_infos").height();
     $(".about_a_propos").width(columnW * .80);
     $(".about_parcours").width(columnW * .80);
-    $(".about_a_propos").css({left: columnW * .05, top: columnH * .05});
-    $(".about_parcours").css({left: columnW * .05, top: columnH * .1});
+    $(".about_a_propos").css({left: columnW * .05, top: winW * .05});
+    $(".about_parcours").css({left: columnW * .05, top: winW * .05});
     return 1
 }
 
@@ -76,7 +87,7 @@ function mobileInit() {
     $(".column_general_mobile").show()
     var timeOut = setTimeout(function () {
         if (timeOut) {
-            animatedText();
+            animatedText('mobile');
             clearTimeout(timeOut);
         }
     }, 500);
@@ -112,8 +123,12 @@ function ajustParcoursMobile() {
 
 }
 
-function animatedText() {
-    consoleText(['Dorian AMCHI'], 'text', ['rgba(0, 255, 219, 0.97)']);
+function animatedText(screen) {
+    if(screen == "desktop"){
+        consoleText(['Dorian AMCHI'], 'text', ['rgba(0, 255, 219, 0.97)']);
+    }else if(screen == "mobile"){
+        consoleText(['Dorian AMCHI'], 'text_mobile', ['rgba(0, 255, 219, 0.97)']);
+    }
 
     function consoleText(words, id, colors) {
         if (colors === undefined) colors = ['black'];

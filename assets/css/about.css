@@ -32,3 +32,9 @@
     position: relative;
     padding: 0 !important;
 }
+
+.second_grid{
+    position: relative;
+    left: 0 !important;
+    padding: 0 !important;
+}

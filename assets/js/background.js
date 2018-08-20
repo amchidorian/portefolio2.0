@@ -10,6 +10,10 @@ ctx.canvas.width = ww - $(".stage_banner").height();
 ctx.canvas.height = wh;
 
 $(window).resize(function () {
+    ww = window.innerWidth;
+    wh = window.innerHeight;
+    ctx.canvas.width = ww;
+    ctx.canvas.height = wh;
     init();
 });
 
@@ -19,7 +23,7 @@ function init() {
     }
     // window.addEventListener("mousemove", onMouseMove);
     // window.onresize = onResize;
-        requestAnimationFrame(render);
+    requestAnimationFrame(render);
 
 }
 
@@ -31,13 +35,11 @@ function Particle(i) {
     this.radius = (Math.random()) / 5;
     this.colour = "hsl(" + ((360 / amount) * i) + ",50%,50%)";
     this.colour = colors[Math.floor(this.x / (ww / 9))];
-
     return this;
-
 }
 
 Particle.prototype.render = function (a) {
-    a=100;
+    a = 100;
     ctx.fillStyle = this.colour;
     this.y += this.speed;
     if (this.y >= (wh + this.radius)) {
@@ -48,17 +50,16 @@ Particle.prototype.render = function (a) {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
     ctx.fill();
-
 }
 
-// function onResize() {
-//     ww = window.innerWidth;
-//     wh = window.innerHeight;
-//     ctx.canvas.width = ww;
-//     ctx.canvas.height = wh;
-//     init();
-//     // cancelAnimationFrame(requestAnimationFrame(render));
-// };
+function onResize() {
+    ww = window.innerWidth;
+    wh = window.innerHeight;
+    ctx.canvas.width = ww;
+    ctx.canvas.height = wh;
+    init();
+    // cancelAnimationFrame(requestAnimationFrame(render));
+};
 
 function render(a) {
     if (a == null || 15000 > a) {
@@ -68,7 +69,6 @@ function render(a) {
             particles[i].render(a);
         }
     }
-
 };
 
 init();
